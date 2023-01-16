@@ -21,13 +21,20 @@ public class Lessons150370 {
 //    static String[] privacies = {"2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"};
 
     // Question 2
-    static String today = "2020.01.01";
-    static String[] terms = {"Z 3", "D 5"};
-    static String[] privacies = {"2019.01.01 D", "2019.11.15 Z", "2019.08.02 D", "2019.07.01 D", "2018.12.28 Z"};
+//    static String today = "2020.01.01";
+//    static String[] terms = {"Z 3", "D 5"};
+//    static String[] privacies = {"2020.08.01 D", "2019.11.15 Z", "2019.08.02 D", "2019.07.01 D", "2018.12.28 Z"};
+
+    // Question 3
+    static String today = "2022.02.28";
+    static String[] terms = {"A 23"};
+    static String[] privacies = {"2020.01.28 A"};
 
     public static void main(String[] args) {
         lessons = new Lessons150370();
         lessons.solution(today, terms, privacies);
+        System.out.println(23/12);
+        System.out.println(23%12);
     }
     public int[] solution(String today, String[] terms, String[] privacies) {
         // 1.today데이터 형 변환
@@ -81,13 +88,13 @@ public class Lessons150370 {
         int i = 0;
         for(Date date : privacy){
             result = privacy.get(i).compareTo(today);
-//            System.out.println("Date >> " + privacy.get(i) + " | result >> " + result);
+            System.out.println("Date >> " + privacy.get(i) + " | result >> " + result);
             if(result < 0){
                 returnList.add(i+1);
             }
             i++;
         }
-//        System.out.println("결과 >>> " + returnList);
+        System.out.println("결과 >>> " + returnList);
         return returnList;
     }
     private Date castDate(String date){
@@ -110,8 +117,8 @@ public class Lessons150370 {
         day = Integer.parseInt(dateSplit[2]);
         month = month + terms;
         if(month > 12){
+           year = year + (month / 12);
            month = month % 12;
-           year = year + 1;
         }
         day = day - 1;
         if(day <= 0){
