@@ -7,7 +7,9 @@ import java.util.Map;
 
 /**
  * TITLE 2023 KAKAO BLIND RECRUITMENT_택배 배달과 수거하기
+ * URL https://school.programmers.co.kr/learn/courses/30/lessons/150369
  * SINCE 2023-01-12
+ * SCORE 75
  * 최진영
  */
 public class Lesson150369 {
