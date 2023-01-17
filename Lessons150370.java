@@ -33,8 +33,6 @@ public class Lessons150370 {
     public static void main(String[] args) {
         lessons = new Lessons150370();
         lessons.solution(today, terms, privacies);
-        System.out.println(23/12);
-        System.out.println(23%12);
     }
     public int[] solution(String today, String[] terms, String[] privacies) {
         // 1.today데이터 형 변환
