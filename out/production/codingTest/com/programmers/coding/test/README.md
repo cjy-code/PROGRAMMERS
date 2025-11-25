@@ -1,2 +1,0 @@
-# PROGRAMMERS
-coding test scm

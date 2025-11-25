@@ -1,4 +1,4 @@
-package main.java.com.programmers.greedy;
+package src.com.programmers.main.greedy;
 
 /**
  * title: 콜라 문제

@@ -1,4 +1,4 @@
-package main.java.com.programmers.greedy;
+package src.com.programmers.main.greedy;
 
 import java.util.HashMap;
 import java.util.Map;

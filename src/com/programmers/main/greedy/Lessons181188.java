@@ -1,4 +1,4 @@
-package main.java.com.programmers.greedy;
+package src.com.programmers.main.greedy;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,13 +26,7 @@ public class Lessons181188 {
     }
 
     public int solution(int[][] targets) {
-        /*
-          1. 최소, 최대 위치 찾기 : minSpot, maxSpot
-          2. inSpot ~ maxSpot에 포함되는 개구간 카운팅 : mapSpot
-          3. mapSpot 최대 카운팅 위치에 포함되는 개구간 delete
-          4. ++answer
-          5. List.size != 0 ? GO 2 : End
-        */
+
         HashMap<Integer, int[]> targetMap = new HashMap<Integer, int[]>();
         HashMap<Integer, Integer> spotMap = new HashMap<Integer, Integer>();
         int answer = 0;
