@@ -8,9 +8,9 @@ public class SolutionRunner {
         BFS_Template bfs = new BFS_Template();
 
         int[][] grid = {
-                {1, 1, 0, 0, 0},
-                {1, 1, 0, 1, 1},
-                {0, 0, 0, 1, 1},
+                {0, 1, 0, 0, 0},
+                {1, 1, 1, 0, 1},
+                {0, 1, 0, 1, 1},
                 {1, 0, 0, 0, 0}
         };
 
