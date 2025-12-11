@@ -20,23 +20,23 @@ public class KruskalExample {
     }
 
     public static void main(String[] args) {
-        int n = 4; // 정점 개수
+        int n = 4; // 정점 개수 (0,1,2,3)
 
         // 간선 리스트: {start, end, cost}
         int[][] edges = {
-                {1, 2, 3},
-                {2, 3, 2},
-                {3, 4, 4},
-                {1, 4, 10},
-                {2, 4, 5}
+                {0,1,1},
+                {0,2,2},
+                {1,2,5},
+                {1,3,1},
+                {2,3,8}
         };
 
         // 1. 간선 비용 기준 정렬
         Arrays.sort(edges, (a, b) -> a[2] - b[2]);
 
-        // 2. parent 초기화
-        parent = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
+        // 2. parent 초기화 (0 ~ n-1)
+        parent = new int[n];
+        for (int i = 0; i < n; i++) {
             parent[i] = i;
         }
 
@@ -51,8 +51,8 @@ public class KruskalExample {
 
             // 사이클 여부 체크
             if (find(a) != find(b)) {
-                union(a, b);
-                totalCost += cost;
+                union(a, b);         // 사이클이 아닐 때만 합치기
+                totalCost += cost;   // 이때만 비용 합산
                 edgeCount++;
 
                 System.out.println("선택된 간선: " + a + " - " + b + " (비용: " + cost + ")");
